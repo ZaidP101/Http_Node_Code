@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #1e1e2f;
+        color: #f3f4f6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #60a5fa;
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    form {
+        background-color: #2a2a3a;
+        padding: 30px;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 2px solid #3b3b4f;
+        border-radius: 8px;
+        background-color: #1e1e2f;
+        color: #f3f4f6;
+        font-size: 1em;
+    }
+
+    input[type="number"]::placeholder {
+        color: #888;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+
+    button {
+        background-color: #2563eb;
+        color: #f3f4f6;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #1d4ed8;
+    }
+
+    button:active {
+        background-color: #1e3a8a;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #60a5fa;
+        text-align: center;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>A Basic Calculator</h1>
+    <form action="http://localhost:3000/calculator" method="get">
+        <input type="number" name="num1" id="num1" placeholder="Enter First number" required />
+        <input type="number" name="num2" id="num2" placeholder="Enter Second number" required />
+        <div>
+            <button type="submit" name="operator" value="+">+</button>
+            <button type="submit" name="operator" value="-">-</button>
+            <button type="submit" name="operator" value="*">*</button>
+            <button type="submit" name="operator" value="/">/</button>
+        </div>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
